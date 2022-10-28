@@ -51,4 +51,4 @@ with DAG(dag_id='trigger_airbyte_dbt_job',
         wait_seconds=3
     )
 
-    airbyte_economy_sync >> airbyte_demographics_sync >> airbyte_index_sync
+    airbyte_epidemiology_sync >> airbyte_economy_sync >> airbyte_demographics_sync >> airbyte_index_sync
