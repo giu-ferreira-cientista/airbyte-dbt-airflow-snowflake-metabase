@@ -1,7 +1,8 @@
 # airbyte-dbt-airflow-snowflake-metabase
-Repositório para armazenar os artefatos do Pipeline Moderno com AirByte + DBT + Airflow + SnowFlake + Metabase
+Repositório para armazenar os artefatos do Pipeline utilizando Modern Data Stack com AirByte + DBT + Airflow + SnowFlake + Metabase
 
 - Criar conta no SnowFlake
+
 - Criar conta no DBT
 
 - Sobe o ambiente do Pipeline
@@ -20,3 +21,11 @@ Repositório para armazenar os artefatos do Pipeline Moderno com AirByte + DBT +
 
 - Metabase sobe na porta 3000
 - Airflow sobe na porta 8080
+
+
+Arquivos Chave:
+
+- docker-compose-airflow.yaml
+- docker-compose-airbyte.yaml
+- setup.sh
+- dags/dag_airbyte_dbt.py

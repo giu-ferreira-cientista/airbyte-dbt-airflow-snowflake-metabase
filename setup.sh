@@ -20,12 +20,20 @@ up() {
 
   echo "Access Airbyte at http://localhost:8000 and set up the connections."
   
+  echo "Access Airflow at http://localhost:8080 to kick off your Airbyte sync DAG."  
+}
+
+config() {
+  echo "Connecting Airflow with Airbyte..."
   echo "Enter your Airbyte Epidemiology connection ID: "
   read epidemiology_connection_id
+
   echo "Enter your Airbyte Economy connection ID: "
   read economy_connection_id
+
   echo "Enter your Airbyte Demographics connection ID: "
   read demographics_connection_id
+
   echo "Enter your Airbyte Index connection ID: "
   read index_connection_id
 
@@ -37,8 +45,8 @@ up() {
 
   docker-compose -f docker-compose-airflow.yaml run airflow-webserver airflow connections add 'airbyte_example' --conn-uri 'airbyte://host.docker.internal:8000'
 
-  echo "Access Airflow at http://localhost:8080 to kick off your Airbyte sync DAG."  
 }
+
 
 down() {
   echo "Stopping Airbyte..."
